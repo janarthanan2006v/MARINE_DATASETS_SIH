@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data + AI Marine Analytics Portal</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      color: #e0e7ff;
+      overflow: hidden;
+      height: 100vh;
+      position: relative;
+    }
+
+    /* Background video */
+    video.bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+      filter: brightness(0.45) contrast(1.1);
+    }
+
+    /* Overlay for readability */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 10, 25, 0.4);
+      z-index: -1;
+    }
+
+    /* Content */
+    .container {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 100px 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: #64b5f6;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #cfd8dc;
+      margin-bottom: 50px;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      padding: 14px 35px;
+      font-size: 17px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0d47a1;
+      transform: scale(1.05);
+    }
+
+    .outlined-btn {
+      background: transparent;
+      border: 2px solid #90caf9;
+      color: #90caf9;
+    }
+
+    .outlined-btn:hover {
+      background: rgba(144, 202, 249, 0.15);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #90caf9;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.9rem; }
+      h2 { font-size: 1rem; }
+      button { padding: 12px 25px; font-size: 15px; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Use jana.html as background video -->
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="jana.html" type="video/mp4">
+  </video>
+
+  <div class="overlay"></div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>🌊 Data + AI Marine Analytics Portal</h1>
+    <h2>Dive into the future of marine intelligence with AI-powered analytics and insights.</h2>
+
+    <div class="btn-container">
+      <button onclick="showDashboard()">Analytics Dashboard</button>
+      <button class="outlined-btn" onclick="showGraphs()">Graph Viewing</button>
+    </div>
+  </div>
+
+  <footer>© 2025 Marine Analytics | Powered by Data + AI</footer>
+
+  <script>
+    function showDashboard() {
+      alert("Analytics Dashboard coming soon — stay tuned!");
+    }
+
+    function showGraphs() {
+      window.open("https://chart-studio.plotly.com", "_blank");
+    }
+  </script>
+</body>
+</html>
