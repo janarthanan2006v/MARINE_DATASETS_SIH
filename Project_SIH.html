@@ -15,18 +15,8 @@
       overflow: hidden;
       height: 100vh;
       position: relative;
-    }
-
-    /* Background video */
-    video.bg-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -2;
-      filter: brightness(0.45) contrast(1.1);
+      background: url("img.jpg") no-repeat center center fixed;
+      background-size: cover;
     }
 
     /* Overlay for readability */
@@ -36,10 +26,11 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 10, 25, 0.4);
+      background: rgba(0, 10, 25, 0.55);
       z-index: -1;
     }
-    /* Content */
+
+    /* Center content */
     .container {
       text-align: center;
       max-width: 900px;
@@ -115,14 +106,8 @@
 </head>
 
 <body>
-  <!-- Use jana.html as background video -->
-  <video class="bg-video" autoplay muted loop playsinline>
-    <source src="jana.html" type="video/mp4">
-  </video>
-
   <div class="overlay"></div>
 
-  <!-- Main Content -->
   <div class="container">
     <h1>🌊 Data + AI Marine Analytics Portal</h1>
     <h2>Dive into the future of marine intelligence with AI-powered analytics and insights.</h2>
