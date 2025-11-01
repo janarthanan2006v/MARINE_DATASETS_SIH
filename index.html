@@ -12,7 +12,7 @@
       margin: 0;
       font-family: "Poppins", sans-serif;
       color: #e0e7ff;
-      overflow: hidden;
+      overflow-x: hidden;
       height: 100vh;
       position: relative;
       background: url("Jana.jpeg") no-repeat center center fixed;
@@ -41,7 +41,7 @@
     }
 
     h1 {
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       font-weight: 600;
       color: #64b5f6;
       margin-bottom: 10px;
@@ -51,7 +51,7 @@
       font-size: 1.2rem;
       font-weight: 400;
       color: #cfd8dc;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
 
     .btn-container {
@@ -59,6 +59,7 @@
       justify-content: center;
       gap: 25px;
       flex-wrap: wrap;
+      margin-bottom: 40px;
     }
 
     button {
@@ -87,6 +88,43 @@
       background: rgba(144, 202, 249, 0.15);
     }
 
+    /* Code box styling */
+    .code-box {
+      background-color: #ffffff;
+      color: #1a1a1a;
+      text-align: left;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      white-space: pre;
+      overflow-x: auto;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      position: relative;
+    }
+
+    /* Copy button */
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      padding: 6px 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .copy-btn:hover {
+      background-color: #0d47a1;
+    }
+
     footer {
       position: absolute;
       bottom: 15px;
@@ -101,6 +139,7 @@
       h1 { font-size: 1.9rem; }
       h2 { font-size: 1rem; }
       button { padding: 12px 25px; font-size: 15px; }
+      .code-box { font-size: 0.85rem; padding: 15px; }
     }
   </style>
 </head>
@@ -114,7 +153,28 @@
 
     <div class="btn-container">
       <button onclick="showDashboard()">Analytics Dashboard</button>
-      <button class="outlined-btn" onclick="showGraphs()">Work with data</button>
+      <button class="outlined-btn" onclick="showGraphs()">Work with Data</button>
+    </div>
+
+    <!-- Code Snippet Box -->
+    <div class="code-box" id="codeSnippet">
+      <button class="copy-btn" onclick="copyCode()">Copy</button>
+import pandas as pd
+
+# Step 1: Replace the file_id from your Google Drive link
+# Original link: https://drive.google.com/file/d/1ja5lAWZ8AuZxwqr0PmaUM_6xEIXw-W_G/view?usp=drive_link
+
+file_id = "1ja5lAWZ8AuZxwqr0PmaUM_6xEIXw-W_G"
+
+# Step 2: Create the downloadable link for pandas
+download_url = f"https://drive.google.com/uc?id={file_id}"
+
+# Step 3: Read the CSV file using pandas
+df = pd.read_csv(download_url)
+
+# Step 4: Display the first few rows
+print("✅ CSV loaded successfully!")
+df.head()
     </div>
   </div>
 
@@ -127,6 +187,14 @@
 
     function showGraphs() {
       window.open("index1.html", "_blank");
+    }
+
+    // Copy Code Function
+    function copyCode() {
+      const codeText = document.getElementById("codeSnippet").innerText;
+      navigator.clipboard.writeText(codeText).then(() => {
+        alert("✅ Code copied to clipboard!");
+      });
     }
   </script>
 </body>
