@@ -161,19 +161,13 @@
       <button class="copy-btn" onclick="copyCode()">Copy</button>
 import pandas as pd
 
-# Step 1: Replace the file_id from your Google Drive link
-# Original link: https://drive.google.com/file/d/1ja5lAWZ8AuZxwqr0PmaUM_6xEIXw-W_G/view?usp=drive_link
 
-file_id = "1ja5lAWZ8AuZxwqr0PmaUM_6xEIXw-W_G"
+url = "https://drive.google.com/uc?id=1ja5lAWZ8AuZxwqr0PmaUM_6xEIXw-W_G"
 
-# Step 2: Create the downloadable link for pandas
-download_url = f"https://drive.google.com/uc?id={file_id}"
+# Load dataset
+df = pd.read_csv(url)
 
-# Step 3: Read the CSV file using pandas
-df = pd.read_csv(download_url)
-
-# Step 4: Display the first few rows
-print("✅ CSV loaded successfully!")
+# Quick peek
 df.head()
     </div>
   </div>
