@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Marine Taxonomy Explorer – Nemipteridae Study</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Poppins", system-ui, sans-serif;
+      background: linear-gradient(180deg, #001f3f 0%, #000a1a 100%);
+      color: #e0e7ff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, rgba(0,51,102,0.95), rgba(0,26,51,0.95));
+      text-align: center;
+      color: #90caf9;
+      padding: 80px 20px 100px 20px;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+      position: absolute;
+      inset: 0;
+      opacity: 0.25;
+      z-index: -1;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      font-weight: 600;
+      color: #64b5f6;
+      margin-bottom: 12px;
+    }
+
+    p.subtitle {
+      font-size: 1.15rem;
+      color: #cfd8dc;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 70px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      color: #90caf9;
+      margin-bottom: 25px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    section img {
+      width: 90%;
+      max-width: 520px;
+      border-radius: 16px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+      margin: 25px auto;
+      display: block;
+    }
+
+    .info {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-top: 15px;
+      color: #cfe3fa;
+    }
+
+    .btn {
+      background: #1976d2;
+      color: white;
+      padding: 14px 30px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 35px;
+      transition: 0.3s ease;
+      box-shadow: 0 0 12px rgba(100, 181, 246, 0.5);
+    }
+
+    .btn:hover {
+      background: #0d47a1;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #90caf9;
+      padding: 40px 0;
+      background: rgba(0, 26, 51, 0.95);
+      border-top: 1px solid rgba(100, 181, 246, 0.2);
+      letter-spacing: 0.3px;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      p.subtitle { font-size: 1rem; }
+      section h2 { font-size: 1.4rem; }
+      section img { width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🌊 Marine Taxonomy Explorer</h1>
+    <p class="subtitle">Morphometric and Meristic Traits of Nemipteridae Species</p>
+  </header>
+
+  <section>
+    <img src="https://images.unsplash.com/photo-1531310130199-ccf40e17c3cc?auto=format&fit=crop&w=1200&q=80" alt="Nemipteridae Fish">
+    <div class="info">
+      <p>This project visualizes and classifies <strong>Nemipteridae</strong> species using detailed
+      morphological traits such as fin counts, body proportions, and meristic data.
+      The dataset integrates taxonomic hierarchy and morphometric variations across
+      species collected from various marine regions.</p>
+
+      <p>Explore the interactive notebook to analyze, visualize, and model taxonomic relationships using
+      <strong>Neo4j-based graph taxonomy classification</strong>.</p>
+
+      <button class="btn" onclick="window.open('https://jupyter.org/try-jupyter/lab/', '_blank')">
+        Launch Jupyter Notebook
+      </button>
+    </div>
+  </section>
+
+  <section>
+    <h2>About the Dataset</h2>
+    <img src="https://images.unsplash.com/photo-1589310243389-9fdfa4d12b76?auto=format&fit=crop&w=1200&q=80" alt="Marine Dataset Visualization">
+    <p class="info">
+      The dataset includes species-specific morphometric and meristic traits such as
+      <em>standard length, head depth, snout length, fin ray counts, gill rakers</em>,
+      and other proportional measurements. Each record is tagged with its corresponding
+      region or sampling area for comparative taxonomy analysis.
+    </p>
+  </section>
+
+  <section>
+    <h2>Objectives</h2>
+    <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1200&q=80" alt="Marine Research Objectives">
+    <p class="info">
+      The study aims to:
+      <br>• Classify Nemipteridae species using morphometric and meristic traits.  
+      <br>• Map taxonomic relationships using Neo4j graph databases.  
+      <br>• Enable interactive exploration via Jupyter Notebook.  
+      <br>• Provide data-driven insights for marine biodiversity and conservation.
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Marine Taxonomy Explorer · Oceanography Data Science Project
+  </footer>
+
+</body>
+</html>
